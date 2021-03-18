@@ -27,13 +27,13 @@ Disable the video device.
 ### int GlVideoState(OglVideo *video)
 Return 1 if the device is enabled, otherwise 0.
 
-### void GlUpdate(OglVideo *video)
+### void GlVideoUpdate(OglVideo *video)
 Transfer the linked memory to the internal memory of the device.
 
-### void GlRender(OglVideo *video)
+### void GlVideoRender(OglVideo *video)
 Render to the display the content of the video memory.
 
-### void GlSetPixelColor(OglVideo *video, byte r, byte g, byte b)
+### void GlVideoSetColor(OglVideo *video, byte r, byte g, byte b)
 Set the current color for the "ON" pixels of the video device.  
 
 # EXAMPLE 1
