@@ -12,28 +12,28 @@ This repository contains all the dependencies and all that you need to build the
 Initialize the video device and return a pointer to it.  
 Width and Height are the current screen resolution in pixels.
 
-### void GlVideoClose(OglVideo **video)
+### void GlVideoClose(GlVideo **video)
 Close the video device and free all the internal allocated resources.  
 
-### void GlVideolAttachMemory(OglVideo *video, byte *mem)
+### void GlVideolAttachMemory(GlVideo *video, byte *mem)
 Attach an external memory to the video device.
 
-### void GlVideoEnable(OglVideo *video)
+### void GlVideoEnable(GlVideo *video)
 Enable the video device.
 
-### void GlVideoDisable(OglVideo *video)
+### void GlVideoDisable(GlVideo *video)
 Disable the video device.
 
-### int GlVideoState(OglVideo *video)
+### int GlVideoState(GlVideo *video)
 Return 1 if the device is enabled, otherwise 0.
 
-### void GlVideoUpdate(OglVideo *video)
+### void GlVideoUpdate(GlVideo *video)
 Transfer the linked memory to the internal memory of the device.
 
-### void GlVideoRender(OglVideo *video)
+### void GlVideoRender(GlVideo *video)
 Render to the display the content of the video memory.
 
-### void GlVideoSetColor(OglVideo *video, byte r, byte g, byte b)
+### void GlVideoSetColor(GlVideo *video, byte r, byte g, byte b)
 Set the current color for the "ON" pixels of the video device.  
 
 # EXAMPLE 1
