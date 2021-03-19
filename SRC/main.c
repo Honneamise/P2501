@@ -1,16 +1,13 @@
 #include "../GLVIDEO/glvideo.h"
-#include "pbm.h"
 
 /**********/
 int main (int argc, char **argv)
 {
-    int w,h = 0;
-
-    byte *mem = NULL;
+    byte *mem = Calloc(64*32/8, sizeof(byte));
     
-    PbmLoad("test.pbm", &mem, &w, &h);
+    mem[0] = 0xAA;
 
-    GlVideo *video = GlVideoInit(w,h);
+    GlVideo *video = GlVideoInit(64,32);
 
     GlVideoAttachMemory(video, mem);
 
@@ -18,7 +15,7 @@ int main (int argc, char **argv)
 
     GlVideoUpdate(video);
 
-    GlVideoSetColor(video, 0x00, 0xFF, 0x00);
+    GlVideoSetColor(video, 0x00, 0x00, 0xFF);
 
     while(GlVideoState(video)==1)
     {

@@ -26,12 +26,12 @@
 #define GlVideo                     OglVideo
 #define GlVideoInit(w,h)            OglSetupVideo(w, h)
 #define GlVideoClose(v)             OglCloseVideo(v)
-#define GlVideoAttachMemory(v,m)    OglAttachMemory(v,m);
+#define GlVideoAttachMemory(v,m)    OglAttachMemory(v,m)
 #define GlVideoEnable(v)            OglVideoEnable(v)
 #define GlVideoDisable(v)           OglVideoDisable(v)
 #define GlVideoState(v)             OglVideoState(v)
-#define GlVideoUpdate(v)            OglUpdate(v);
-#define GlVideoRender(v)            OglRender(v);
-#define GlVideoSetColor(v,r,g,b)    OglSetPixelColor(v,r,g,b);
+#define GlVideoUpdate(v)            OglUpdate(v)
+#define GlVideoRender(v)            OglRender(v)
+#define GlVideoSetColor(v,r,g,b)    OglSetPixelColor(v,r,g,b)
 
 #endif

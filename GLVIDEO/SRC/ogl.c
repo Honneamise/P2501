@@ -60,7 +60,7 @@ void OglSetupGlfw(OglVideo *video)
 
     glfwMakeContextCurrent(video->window);
 
-    glfwSwapInterval(0);
+    glfwSwapInterval(1);
 
 	glfwSetWindowCloseCallback(video->window, OglGlfwWindowCloseCallback);
 
@@ -312,7 +312,7 @@ void OglUpdateTextureData(OglVideo *video)
 
 			for(int j=BYTE_SIZE-1;j>=0;j--)
 			{
-				int val = (b>>j) & 0x0F;
+				int val = (b>>j);
 
 				if(val%2 == 1 ){ video->mem[count] = 0xFF; }
 				else { video->mem[count] = 0x00; }
