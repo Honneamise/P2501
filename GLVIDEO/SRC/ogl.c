@@ -314,7 +314,7 @@ void OglUpdateTextureData(OglVideo *video)
 			{
 				int val = (b>>j);
 
-				if(val%2 == 1 ){ video->mem[count] = 0xFF; }
+				if(val & 1 ){ video->mem[count] = 0xFF; }
 				else { video->mem[count] = 0x00; }
 				count++;
 			} 
